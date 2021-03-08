@@ -6,7 +6,11 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "blog.andreibrindas.com",
+        url: "https://blog.andreibrindas.com/graphql",
+        schema: {
+          requestConcurrency: 5, // currently set to 15
+          previewRequestConcurrency: 2, // currently set to 5
+        },
       },
     },
     "gatsby-plugin-sass",
@@ -14,7 +18,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "",
+        trackingId: "UA-35859566-2",
       },
     },
     "gatsby-plugin-react-helmet",
